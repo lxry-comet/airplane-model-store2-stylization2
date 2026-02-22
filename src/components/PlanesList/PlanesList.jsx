@@ -1,15 +1,18 @@
 import PropTypes from 'prop-types'
-import Planes from '../Planes/Planes' 
-import { getBgColor } from '../../utils/getBackgroundColor'
+import Planes from '@/components/Planes/Planes.jsx' 
+import { getBgColor } from '@/utils/getBackgroundColor.js'
+import css from "./PlanesList.module.css"
+
 
 function PlanesList({ items }) {
 	return (
 		<ul
-			className='item'
+			className={css.list}
 		>
 			{items.map(item => (
 				<li
-					className={getBgColor(item.info.year)}
+					// className={getBgColor(item.info.year)}
+					className={css[getBgColor(item.info.year)]}
 					key={item.id}
 				>
 					<Planes

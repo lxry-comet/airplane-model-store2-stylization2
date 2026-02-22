@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
-import css from "./Section.module.css"; //! CSS-модулі
+import css from "./Section.module.css"; 
+// import css from "@/components/Section/Section.module.css"; 
+
 
 function Section({ title, children }) {
   return (
@@ -7,9 +9,8 @@ function Section({ title, children }) {
       {title
         &&
         <h2
+        // className={`${css.title} ${css.lugrasimoBold}`}
         className={css.titleLugrasimoBold}
-
-        //? className={title && <h2 className={`${css.title} ${css.lugrasimoBold}`}
         >
           {title}
         </h2>} 

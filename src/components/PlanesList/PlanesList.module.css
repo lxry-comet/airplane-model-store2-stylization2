@@ -1,0 +1,26 @@
+/* PlanesList.module.css */
+.list {
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(445px, 1fr));
+	gap: 32px;
+	outline: 1px solid red;
+}
+
+.listItem {
+	display: grid;
+	gap: 12px;
+	padding: 10px;
+	background-color: #ffdb92; /* "year" до 1946 */
+}
+/** backgroundColor: '#d2fdbd', // "year"  1946 - 1999 - last */
+.listItem.last {
+  background-color: #d2fdbd;
+}
+
+/** backgroundColor: '#d6f1ff', // "year" від 2000 - current */
+.listItem.current {
+  background-color: #d6f1ff;
+}
