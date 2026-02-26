@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import Planes from '@/components/Planes/Planes.jsx' 
-import { getBgColor } from '@/utils/getBackgroundColor.js'
+import { getBgColor, } from '@/utils'
 import css from "./PlanesList.module.css"
 
 
@@ -27,6 +27,8 @@ function PlanesList({ items }) {
 						type={item.info.type}
 						price={item.info.price}
 						description={item.info.description}
+						start={item.manufacturing.start}
+						end={item.manufacturing.end}
 					/>
 				</li>
 			))}
